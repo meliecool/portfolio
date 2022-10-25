@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      property="og:description"
+      content="Space Game created by Camélie Groleau"
+    />
+    <meta property="og:image" content="img/meta.jpg" />
+    <title>Space game</title>
+    <link rel="stylesheet" href="css/style.css" />
+        <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:description" content="Portfolio Camélie Groleau - Développement Web">
-    <meta property="og:image"
-        content="https://www.cgroleau.devwebgarneau.com/Portfolio/img/meta.jpg">
-    <meta property="og:url" content="https://www.cgroleau.devwebgarneau.com/Portfolio">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <title>Portfolio Camélie Groleau</title>
-</head>
-
-<body class="parallax">
-    <header id="main-header">
-        <div id="main-nav-sidebar" class="nav-sidebar-container hide relative">
-            <div data-activate="main-nav-sidebar" class="overlay activator">
-                <nav class="nav-sidebar" aria-label="Menu principal des pages">
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="html/profil.html">Profil</a></li>
-                        <li><a href="html/jeu.html">Jeu</a></li>
-                        <li><a href="html/projets.html">Portfolio</a></li>
-                        <li><a href="html/contact.html" class="btn">Me contacter</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div>
-            <p data-activate="main-nav-sidebar" class="activator menu">MENU</p>
-        </div>
-
-    </header>
+  <body id="game-background">
     <main>
-        <section id="section1">
-            <div class="container relative">
-                <svg width="500" height="500" class="reverse absolute poisGauche">
-                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="150" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="70" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="200" cy="60" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="20" cy="100" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="250" cy="120" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="150" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="70" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="200" cy="60" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="20" cy="100" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="250" cy="120" r="5" style="fill:white;" />
-                </svg>
-                <div class="centrer bienvenue">
-                    <h1 class="inline">BIENVENUE</h1>
-                    <svg width="10" height="350" class="inline align-middle rectangle  hideMobile">
-                        <rect width="10" height="350" style="fill:#321d78;" />
-                    </svg>
-                    <h4 class="inline align-middle">SUR MON PORTFOLIO</h4>
-                </div>
-                <svg width="500" height="500" class="absolute poisDroit">
-                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="150" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="70" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="200" cy="60" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="20" cy="100" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="250" cy="120" r="5" style="fill:white;" />
-                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="150" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="70" cy="80" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="200" cy="60" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="20" cy="100" r="5" style="fill:white;" />
-                    <circle class="animPois retardataire" cx="250" cy="120" r="5" style="fill:white;" />
-                </svg>
+      <div id="game" class="show-desktop">
+        <div id="direction" class="direction center show-desktop">
+          <h2>Directions</h2>
+          <div class="flex align-center justify-center">
+            <div class="keys">
+              <p>Move</p>
+
+              <div class="flex align-center justify-center">
+                <div class="key"><i class="fas fa-arrow-up"></i></div>
+                <div class="key"><i class="fas fa-arrow-down"></i></div>
+              </div>
             </div>
-            <div id="btn-entrer"> <a href="html/profil.html" class="btn">ENTRER</a></div>
-        </section>
+
+            <div class="keys esc-btn">
+              <p>Pause</p>
+                <div class="key esc">ESC</div>
+            </div>
+          </div>
+
+          <div class="keys">
+            <p>Fire</p>
+            <div class="key fire spacebar">SPACE</div>
+          </div>
+        </div>
+
+        <div class="flex life">
+          <h2>Life: <span id="life">3</span></h2>
+
+          <div class="score">
+            <h2>Score: <span id="score">0</span></h2>
+          </div>
+        </div>
+
+        <object
+          id="spaceship"
+          type="image/svg+xml"
+          data="img/spaceship.svg"
+        ></object>
+        <svg width="100%" height="900" class="absolute fire" id="fire"></svg>
+        <div id="start-meteor"></div>
+      </div>
+
+      <div id="game-over" class="flex flex-center">
+          <h1>GAME OVER</h1>
+          <a href="#" class="btn btn-color" id="replay">Replay</a>
+      </div>
+
+      <div id="finish-game" class="flex flex-center">
+          <h1>You win!</h1>
+          <a href="#" class="btn btn-color" id="replay">Replay</a>
+      </div>
+
+      <div class="flex flex-center container horizontal show-mobile">
+        <h2>
+          This page is not supported on mobile<br />
+          Please go to a computer 🙂
+        </h2>
+      </div>
     </main>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/anime.min.js"></script>
-    <script src="js/typed.min.js"></script>
     <script src="js/script.js"></script>
-
-</body>
-
+  </body>
 </html>
