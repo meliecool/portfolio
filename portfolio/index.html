@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <title>Portfolio Camélie Groleau</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.7/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.7/firebase-auth.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-database.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-functions.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-storage.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/9.6.7/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body class="parallax">
+    <header id="main-header">
+        <div id="main-nav-sidebar" class="nav-sidebar-container hide relative">
+            <div data-activate="main-nav-sidebar" class="overlay activator">
+                <nav class="nav-sidebar" aria-label="Menu principal des pages">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="html/profil.html">Profil</a></li>
+                        <li><a href="html/jeu.html">Jeu</a></li>
+                        <li><a href="html/projets.html">Portfolio</a></li>
+                        <li><a href="html/contact.html" class="btn">Me contacter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div>
+            <p data-activate="main-nav-sidebar" class="activator menu">MENU</p>
+        </div>
+
+    </header>
+    <main>
+        <section id="section1">
+            <div class="container relative">
+                <svg width="500" height="500" class="reverse absolute poisGauche">
+                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="150" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="70" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="200" cy="60" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="20" cy="100" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="250" cy="120" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="150" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="70" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="200" cy="60" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="20" cy="100" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="250" cy="120" r="5" style="fill:white;" />
+                </svg>
+                <div class="centrer bienvenue">
+                    <h1 class="inline">BIENVENUE</h1>
+                    <svg width="10" height="350" class="inline align-middle rectangle  hideMobile">
+                        <rect width="10" height="350" style="fill:#321d78;" />
+                    </svg>
+                    <h4 class="inline align-middle">SUR MON PORTFOLIO</h4>
+                </div>
+                <svg width="500" height="500" class="absolute poisDroit">
+                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="150" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="70" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="200" cy="60" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="20" cy="100" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="250" cy="120" r="5" style="fill:white;" />
+                    <circle class="animPois" cx="50" cy="50" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="150" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="70" cy="80" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="200" cy="60" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="20" cy="100" r="5" style="fill:white;" />
+                    <circle class="animPois retardataire" cx="250" cy="120" r="5" style="fill:white;" />
+                </svg>
+            </div>
+            <div id="btn-entrer"> <a href="html/profil.html" class="btn">ENTRER</a></div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
