@@ -1,1078 +1,263 @@
-/*************/
-/*  GÉNÉRAL  */
-/*************/
-
-body{
-    margin: 0 auto;
-    font-family: "Courier";
-    overflow-x: hidden;
-    background-color: black;
-    color: white;
+body {
+  margin: 0 auto;
+  font-family: 'Courier';
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
 }
 
-.relative{position: relative;}
-.absolute{position: absolute;}
-.hide{display: none!important;}
-.inline{display: inline-block;}
-.inline-flex{display: inline-flex;}
-.center{text-align: center;}
-
-.align-middle{vertical-align: middle;}
-
-.show-on-mobile{display: none!important; color:  white;}
-
-.container{
-    max-width: 1200px!important;
-    padding-left: 0!important;
-    padding-right: 0!important;
+.absolute {
+  position: absolute;
 }
 
-p{font-size: 22px;}
-li{list-style-type: none;}
-a{text-decoration: none; color: white; font-weight: 600;}
-.button, .btn{background-color:white; border: #321d78 2px solid; padding: 10px 15px; color:#321d78; text-transform: uppercase;}
-.button a{color: #321d78;}
-.button:hover{opacity: 0.8;}
-
-.btn-color{background-color: #321d78; color: white;}
-
-.h400{height: 400px;}
-.w33{width: 30%; margin-bottom: 50px;}
-.w50{width: 50%; padding: 2%;}
-.flex{display: flex;}
-.flex-end{justify-content: flex-end;}
-.flex-center{justify-content: center; align-items: center;}
-.space-between{justify-content: space-between;}
-
-.img-container{
-    border: 2px solid #321d78;
-    border-radius: 0 0 25px 25px;
-    background-color: white;
-    text-align: center;
-
-    img{
-        width: 98%;
-        margin-top: 1.5%;
-        border: 2px solid #321d78;
-    }
-
-    h2, p{text-align: left; color: #321d78; margin: 2%;}
-    p{font-size: 16px;}
+.align-center {
+  align-items: center;
 }
 
-section{position: relative; min-height: 100vh;}
-#projets{margin-top: 175px;}
-
-#vaisseau{
-    position: absolute;
-    top: 230px;
-    left: 0px;
+.center {
+  text-align: center;
 }
 
-#vaisseau1{
-    position: absolute;
-    top: -600px;
-    left: 0px;
-    width: 16.7%;
-
-    animation: descenteProjets 6s linear normal 1 forwards;
+.container {
+  max-width: 1200px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-#spaceship1{z-index: 10;}
-
-
-/**************/
-/*    MENU    */
-/**************/
-
-#main-header{
-    padding: 15px 0 0 20px;
-    z-index: 100;
-    max-width: 1200px!important;
-    padding-left: 0!important;
-    padding-right: 0!important;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+h1 {
+  font-size: 70px;
 }
 
-.nav-sidebar {
-    max-width: 15em;
-    position: relative;
-    z-index: 10;
-    padding: 2em 2rem 0;
-    height: 100vh;
-    background-color: #321d78;
-    transition: transform 0.3s;
-    overflow: auto;
-
-    ul{
-        padding: 0;
-
-        li{
-            
-            a{
-                height: 3rem;
-                display: block;
-                padding: 1rem;
-            }
-
-            &:last-child{margin-top: 1rem; text-align: center;}
-        }
-    }
+p {
+  font-size: 22px;
 }
 
-.nav-sidebar-container{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-
-    .overlay{
-        opacity: 1;
-        transition: opacity 0.5s;
-    }
-
-    .hide .nav-sidebar{transform: translate(-100%);}
-    .nav-sidebar a:hover{text-decoration: none; opacity: 0.5;}
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
 }
 
-.menu{
-    max-height: 55px;
-    max-width: 80px;
-    height: 100%;
-    padding: 0;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
+.btn {
+  background-color: white;
+  border: #321d78 2px solid;
+  padding: 10px 15px;
+  color: #321d78;
+  text-transform: uppercase;
 }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+.btn-color {
+  background-color: #321d78;
+  color: white;
 }
 
-
-/************************/
-/*  SECTION 1 / ACCUEIL */
-/************************/
-
-/* ---GÉNÉRAL--- */
-
-#btn-entrer{
-    text-align: center;
-    margin-top: 100px;
-
-    a{
-        font-size: 40px;
-        padding: 15px 30px;
-    }
+.flex {
+  display: flex;
 }
 
-#section1{
-    color: white;
-    height: 100%;
-    padding: 5% 0 0;
-    min-height: 85vh;
-
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .rectangle{
-        box-shadow: 1px 1px 100px 15px black;
-    }
+.flex-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.bienvenue{
-    padding-right: 130px;
-    padding-top: 10%;
-
-    h4{
-        font-size: 1.2rem;
-        border-bottom: 2px solid white;
-        border-top: 2px solid white;
-        margin-top: 0;
-        padding: 10px 0
-    }
-
-    h1{font-size: 4rem;}
-
+#spaceship {
+  position: absolute;
+  top: 230px;
+  left: 0px;
 }
 
+#game {
+  height: 99vh;
+  overflow: hidden;
 
-/* ---ANIMATIONS--- */
-
-/* Style écriture automatique */
-#text-auto{margin: 50px 0;}
-.typed-cursor {color: white; }
-
-#typed{
-    color: white;
-    font-family: "Courier";
-    font-size: 1.8rem;
-    overflow: hidden;
-    width: 100%;
-    animation: type 4s steps(65, end),
-    blink-caret .75s step-end infinite;
+  p {
+    margin-bottom: 0;
   }
 
-/* Style animation des pois */
-svg .animPois{width: 50%; opacity: 0.1;}
-.poisGauche, .poisDroit{top: 30%; bottom: 50px; width: 100%; height:80%;}
-.poisGauche{right: 50%;}
-.poisDroit{left:50%;}
-.reverse{transform: scaleX(-1);}
-
-
-
-.animPois{
-    animation: animPois 2.5s linear infinite;
+  .container {
+    background-color: #1d1d1b;
+    padding: 20px 30px !important;
+  }
 }
 
-.retardataire{
-    animation: animPoisDelay 3.5s linear infinite;
-    animation-delay: .5s;
+#game-background {
+  background-image: url(../img/fond.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-
-/* Keyframes des pois */
-@keyframes animPois{
-    0%{opacity: 0;}
-    10%,85%{opacity: 0.3;}
-    100%{opacity: 0; transform: translateX(250px);}
+#game-background .horizontal {
+  display: none;
 }
 
-@keyframes animPoisDelay{
-    0%{opacity: 0;}
-    10%,85%{opacity: 0.1;}
-    100%{opacity: 0; transform: translateX(250px);}
+.direction,
+.directionMobile {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 35px 15px 20px;
+  background-color: #343434;
 }
 
-
-/***********************/
-/*  SECTION 2 / PROFIL */
-/***********************/
-
-/* ---GÉNÉRAL--- */
-
-#section2{
-    min-height: 75vh;
+.direction {
+  bottom: 0;
+  width: 200px;
+  position: absolute;
+  left: 0;
 }
 
-#sectionProfil footer{
-    margin-top: 25px;
+.directionMobile {
+  width: 100%;
 }
 
-#anim-container1{width: 100%; max-width: 750px;}
-.plusBas{top: 30%; right: -80%; display: none; text-align: center;}
-#anim1{margin: 0 auto; padding: 0;}
-#titre{text-align: center;}
+.key {
+  border: 2px solid white;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  margin: 0 10px;
 
-/* ---ANIMATIONS--- */
-
-/* Style du vaisseau */
-#spaceship{max-width: 450px;}
-
-/* Style du gif */
-.gif{
-    max-width: 350px;
-    img{width: 100%;}
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Style des projets */
-.projet1, .projet2, .projet3{
-    position: absolute;
-    top: 163px;
-    left: -75px;
-    width: 600%;
-
-    .img-container{border-radius: 0;}
+.spacebar {
+  width: 80%;
 }
 
-.screen{text-align: center; display: none;}
-.screenshot{position:absolute; top: 35%; left: 40%; max-width: 100px;}
-
-/* Style des parties du corps du personnage */
-
-#bras_pointe{opacity:0}
-#text_bulle{opacity:0;}
-
-.animCouette1{
-    animation: mouvementCouette 2s linear infinite;
-    transform-origin: 202px 250px;
-    z-index: -2;
+#direction h2 {
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.clignementOeil{
-    animation: clignementOeil 4s ease-in-out 2s normal infinite;
-    transform-origin: 202px 310px;
+.keys {
+  p {
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
 }
 
-.clignementOeil2{
-    animation: clignementOeil 4s ease-in-out 2s normal infinite;
-    transform-origin: 202px 145px;
+.esc,
+.fire {
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.tourneOeil{
-    animation: translationPupille 4s linear 0s infinite normal running;
+.esc {
+  max-width: 65px;
 }
 
-.animBouche{
-    animation: boucheOuvre 0.4s cubic-bezier(.34,0,.61,1) 1.5s 3 normal running;
-    transform-origin: 202px 315px;
-    animation-fill-mode: forwards;
+.fire {
+  max-width: 100%;
+  top: 0;
+  left: 155px;
+  z-index: -1;
 }
 
-.animBras{
-    animation: brasTourne 0.8s ease-in-out 2s 1 normal forwards;
-    transform-origin: 280px 365px;
+.life {
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.score {
+  margin-left: 40px;
 }
 
-.animBrasPointe{
-    display: block;
-    opacity: 0;
-    animation: leveBras 0.8s ease-in-out 1.6s 1 normal forwards,  pointe 0.2s linear 3s 2 normal;
-    transform-origin: 280px 365px;
+#meteor-container {
+  max-width: 100px;
+
+  img {
+    width: 100%;
+  }
 }
 
-.animBulleText{
-    animation: apparitionBulle 0.4s linear 1s 1 normal forwards;
-    transform: scaleY(0);
-    transform-origin: 270px 200px;
+.meteor-right {
+  top: 45%;
+  left: 1920px;
+  max-width: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.animText{
-    animation: textApparait 0.4s linear 1.5s 1 normal forwards;
-    transform: scaleX(0);
-    transform-origin: 380px 200px;
+#start-meteor {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* ---Style de la descente des projets--- */
-    
-.projet1{animation: disparition1 1s linear normal 1 forwards;}
-.projet2{opacity: 0; animation: disparition2 3.2s linear normal 1 forwards;}
-.projet3{opacity: 0; animation: disparition3 5.5s linear normal 1 forwards;}
+#game-over,
+#finish-game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  text-align: center;
+  display: none;
 
-/* --- Style de l'apparition des projets--- */
-.projetComplet1{animation: apparition1 1s linear normal 1 forwards;}
-.projetComplet2{animation: apparition2 4.5s linear normal 1 forwards;}
-.projetComplet3{animation: apparition3 5.7s linear normal 1 forwards;}
+  h1 {
+    font-size: 70px;
+  }
 
-
-/* ---Keyframes de la descente du vaisseau--- */
-
-@keyframes descenteProjets{
-    16%, 18%{top: 77px; left: 6.4%;}
-    34%, 36%{top: -600px;}
-    52%, 54%{top: 77px; left: 41.3%;}
-    71%, 73%{top: -600px;}
-    90%, 97%{top: 77px; left: 76.5%;}
-    100%{top: -600px; left: 66.5%;}
-}
-    
-    
-/* ---Keyframes de l'apparition / disparition des projets--- */
-    
-@keyframes disparition1{
-    0%, 99%{opacity: 1;}
-    100%{display: none; opacity: 0;}
-}
-    
-@keyframes disparition2{
-    0%, 70%{opacity: 0;}
-    71%, 98%{opacity: 1;}
-    99%, 100%{display: none;}
-}
-    
-@keyframes disparition3{
-    0%, 80%{opacity: 0;}
-    81%, 99%{opacity: 1;}
-    100%{display: none;}
-}
-    
-    
-@keyframes apparition1{
-    0%, 98%{opacity: 0;}
-    100%{opacity: 1;}
-}
-    
-@keyframes apparition2{
-    0%, 69%{opacity: 0;}
-    70%, 100%{opacity: 1;}
-}
-    
-@keyframes apparition3{
-    0%, 95%{opacity: 0;}
-    96%, 100%{opacity: 1;}
-}
-
-
-/* Keyframes des cheveux */
-
-@keyframes mouvementCouette{
-    0%{transform: rotate(0deg);}
-    25%{transform: rotate(5deg);}
-    50%{transform: rotate(0deg);}
-    75%{transform: rotate(5deg);}
-    100%{transform: rotate(0deg);}
-}
-
-
-/* Keyframes des yeux */
-
-@keyframes clignementOeil{
-    0%{transform: scaleY(1);}
-    45%{transform: scaleY(1);}
-    50%{transform: scaleY(0);}
-    55%{transform: scale(1);}
-    100%{transform: scaleY(1);}
-}
-
-@keyframes translationPupille{
-    0%,35%{transform: translate(0);}
-    40%,70%{transform: translate(-12px);}
-    85%,100%{transform: translate(0);}
-}
-
-
-/* Keyframes de la bouche */
-
-@keyframes boucheOuvre{
-    0%{transform: scaleY(1);}
-    33%{transform: scaleY(1.5);}
-    66%{transform: scaleY(0);}
-    100%{transform: scaleY(1);}
-}
-
-
-/* Keyframes du bras */
-
-@keyframes brasTourne{
-    0%{display: block; opacity: 1;}
-    50%{opacity:0; transform: rotate(-85deg);}
-    100%{opacity:0; transform: rotate(-85deg)}
-}
-
-@keyframes leveBras{
-    50%{opacity: 0; transform:rotate(90deg);}
-    54%{opacity: 1;}
-    100%{transform: rotate(0); opacity: 1;}
-}
-
-@keyframes pointe{
-    0%{opacity: 1;}
-    100%{opacity:1; transform: translate(10px);}
-}
-
-
-/* Keyframes de la bulle text */
-
-@keyframes apparitionBulle{
-    0%{transform: scaleY(0); opacity:1}
-    100%{transform: scaleY(1); opacity:1}
-}
-
-@keyframes textApparait{
-    100%{transform: scaleX(1);}
-}
-
-
-/* Keyframes des cadres */
-
-@keyframes arriveGauche{
-    0%{transform: translateX(-10);}
-    100%{transform: translateX(0);}
-}
-
-
-/**************************/
-/*  SECTION 3 / PARALLAX  */
-/**************************/
-
-/* ---GÉNÉRAL--- */
-
-#section3{ padding: 10px 30px;}
-
-.technos{
-    flex-wrap: wrap;
-    margin-left: -25px;
-    margin-right: -25px;
-
-    span{
-    padding: 10px 25px;
-    font-weight: 600;
+  a.btn-color {
     font-size: 24px;
-    }
+    font-weight: normal;
+    margin-bottom: 60px;
+    border: none;
+    width: 230px;
+    padding: 15px 20px;
+  }
 }
 
-#sectionProjets{overflow: hidden;}
-#section3 svg{width: 100%; max-width: 200px;}
-
-#sectionProjets footer{
-    overflow: hidden;
-    position: absolute;
-    bottom: -570px;
-    width: 100%;
+.blinking-eye {
+  animation: blinkingEye 4s ease-in-out 2s normal infinite;
+  transform-origin: 202px 145px;
 }
 
-
-/* ---PARALLAX--- */
-
-.parallax{
-    background-image: url('../img/fond.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-size: cover;
+@keyframes blinkingEye {
+  0% {
+    transform: scaleY(1);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  55% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
-#parallax-container{
-    perspective: 10px;
-    overflow-x: hidden;
-    overflow-y: auto;
+@media screen and (max-width: 1000px) {
+  .show-mobile {
+    display: inline-block !important;
+  }
+
+  .show-desktop {
+    display: none !important;
+  }
 }
 
-.img-parallax{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-#montagnes{background-image: url(../img/montagnes.svg); transform: translateZ(-10px) scale(2.1); z-index: -10; height: 75%!important; top: 65%;}
-#moon{background-image: url(../img/moon.png); z-index: -20; transform: translateZ(-20px) scale(1.4); width: 150%; height: 120%; top: 35%;}
-
-/* ---CARDS--- */
-.text-card{padding: 10px;}
-
-
-/* ---ANIMATION--- */
-
-/* Style vaisseau */
-.animProjets{animation: projetApparait 0.4s linear 6s 1 normal forwards; opacity: 0;}
-
-/* Keyframes du vaisseau */
-@keyframes projetApparait{
-    0%{transform: scaleX(0);}
-    100%{opacity: 1; transform: scaleX(1);}
-}
-
-
-
-/*********************/
-/*  SECTION 4 / JEU  */
-/*********************/
-
-/* ---GÉNÉRAL--- */
-
-#anim-container{
-    width: 100%;
-    height: 100%;
-    padding: 20px 20px 0;
-    overflow: hidden;
-    background-color: #1D1D1B;
-    position: relative;
-    margin: 0 auto;
-    border-bottom: 3px solid black;
-    background-image: url(../img/anim_back.svg);
-    background-repeat: repeat-x;
-    background-size: cover;
-}
-
-#section4{
-    padding: 100px 0 30px;
-    min-height: 85vh;
-    overflow: hidden;
-
-    h1, p{color: white;}
-    p{margin-bottom: 0;}
-
-    .container{background-color: #1D1D1B; padding: 20px 30px!important;}
-}
-
-#fond-section4{
-    background-image: url(../img/fond.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 32px;
-}
-
-#anim{
-    width: 650px;
-    position: relative;
-    height: 560px;
-}
-
-#fond-section4 .horizontal{display: none;}
-
-
-/*   ---BOITE DE DIRECTIONS---  */
-
-.direction, .directionMobile{
-    color: white;
-    border: 1px solid white;
-    padding: 10px 35px 15px 20px;
-    background-color: #343434;
-}
-
-.direction{
-    bottom: 0;
-    max-width: 350px;
-    position: absolute;
-    left: 0;
-}
-.directionMobile{width: 100%;}
-
-.touche{
-    border: 2px solid white;
-    max-width: 40px;
-    width: 100%;
-    padding: 10px;
-    margin: 0 10px;
-}
-
-#direction h2{text-transform: uppercase; margin: 0;}
-
-.touches{
-    p{padding-bottom: 10px; font-size: 15px;}
-}
-
-.esc, .tir{font-size: 17px; font-weight: bold; text-transform: uppercase;}
-.esc{max-width: 65px;}
-.esc-btn{margin: 0 0 15px 40px;}
-.tir{max-width: 100%; top: 0; left: 155px; z-index: -1;}
-
-
-/* Style vie / Score */
-.life{position: absolute; bottom: -25px; left: 400px; text-transform: uppercase; font-size: 20px;}
-.score{margin-left: 40px;}
-
-/* Style météor */
-#meteorContainer{
-    max-width: 100px;
-
-    img{width: 100%;}
-}
-
-.meteorDroit{
-    top: 45%;
-    left: 1920px; 
-    max-width: 100px;
-    
-    img{width: 100%; height: 100%;}
-}
-
-#startMeteor{position: absolute; top: 0; width: 100%; height: 100%;}
-
-
-/* ---GAME OVER PAGE--- */
-#gameover{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    text-align: center;
-    display: none;
-
-    .btns{width: 520px; margin: 0 auto;}
-    h1{font-size: 70px;}
-    a.btn-contact{font-size: 28px; font-weight: 600; padding: 16px 20px;}
-    a.btn-color{font-size: 24px; font-weight: normal; margin-bottom: 60px; border: none; width: 230px; padding: 15px 20px;}
-
-}
-
-
-/* ---RÉUSSITE PAGE--- */
-#finishGame{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    text-align: center;
-    display: none;
-
-    h2, .btns{width: 520px; margin: 0 auto;}
-    h1{font-size: 70px;}
-    h2{ margin-bottom: 60px;}
-    a.btn-color{font-size: 24px; font-weight: normal; border: none; width: 230px; padding: 15px 20px;}
-}
-
-
-/***********************/
-/*   SECTION CONTACT   */
-/***********************/
-
-/* ---GÉNÉRAL--- */
-#contact{
-    background-image:
-    url(../img/stars.svg),
-    url(../img/fond.jpg);
-    background-size: cover;
-    background-position:
-    top right 520px,
-    center center;
-}
-
-#sectionContact{
-    color: white;
-    min-height: 88.4vh;
-    height: 100%;
-    padding: 5% 5% 0;
-    text-align: center;
-
-    h3{text-transform: uppercase; font-size: 45px;}
-    h4{font-size: 35px; margin-bottom: 10px;}
-
-    input, textarea{
-        width: 100%;
-        min-height: 35px;
-        background-color: rgba(50, 29, 120, 0.8);
-        margin-bottom: 20px;
-        border: 2px solid white;
-        padding-left: 34px;
-        color: white;
-    }
-
-    textarea{margin-bottom: 20px; padding-top: 5px;}
-
-    label{position: absolute; top: 0; left: 10px;}
-
-    input[type=submit]{
-        background-color:white;
-        border: #321d78 2px solid;
-        padding: 10px 15px;
-        color:#321d78;
-        font-weight: 600;
-        font-size: 20px;
-        text-transform: uppercase;
-        cursor: pointer;
-
-        &:hover{opacity: 0.8;}
-    }
-
-    #message label{top: -188px;}
-    .iconsContact{
-        border-radius: 30px;
-        background-color: rgba(50, 29, 120, 0.5);
-        border: 2px solid white;
-        width: 50px;
-        height: 50px;
-        margin-right: 20px;
-
-        i{font-size: 23px; padding: 11px;}
-    }
-
-    a{font-weight: normal; height: 100%; width: 100%;}
-
-    .copyright{
-        font-weight: bold;
-        text-align: right;
-    }
-    
-}
-
-
-/******************/
-/*   ANIMATIONS   */
-/******************/
-
-/* --- Animation des cheveux --- */
-
-.animCouette{
-    animation: mouvementCouette 3s linear infinite;
-    transform-origin: 100px 300px;
-    z-index: -2;
-}
-
-@keyframes mouvementCouette{
-    0%{transform: rotate(0deg);}
-    25%{transform: rotate(3deg);}
-    50%{transform: rotate(0deg);}
-    75%{transform: rotate(3deg);}
-    100%{transform: rotate(0deg);}
-}
-
-
-/* --- Animation de l'oeil --- */
-
-.animOeil{
-    animation: clignementOeil 3s ease-in-out normal infinite;
-    transform-origin: 204px 180px;
-}
-
-@keyframes clignementOeil{
-    0%{transform: scaleY(1);}
-    45%{transform: scaleY(1);}
-    50%{transform: scaleY(0);}
-    55%{transform: scale(1);}
-    100%{transform: scaleY(1);}
-}
-
-
-/********************/
-/*      FOOTER      */
-/********************/
-
-footer{
-    min-height: 100px;
-    background-color: rgba(50, 29, 120, 0.5);
-    border-top: 1px solid white;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-}
-
-
-/********************/
-/*    RESPONSIVE    */
-/********************/
-
-/* ---DESKTOP--- */
-@media screen and (max-width: 1250px){
-    /* --général-- */
-    .menu{padding-left: 30px;}
-
-    /* --section 2-- */
-    #text-auto{margin: 0 auto;}
-    #anim1, #text-auto{height: 400px;}
-}
-
-@media screen and (max-width: 1000px){
-    /* --général-- */
-    .show-on-mobile{display: inline-block!important;}
-
-    /* --section 2-- */
-    #anim1{height: 470px;}
-    #text-auto{padding-top: 120px; margin-bottom: 100px;}
-    #section2{min-height: 100vh}
-
-    /* --section 3-- */
-    #fond-section4{
-
-        background-color: black;
-        background-image: none;
-        #section4{display: none;}
-        #gameover{display: none!important;}
-        .horizontal{display: flex; padding: 0 3%!important;}
-    }
-}
-
-@media screen and (max-width: 990px){
-    /* --général-- */
-    .w33{width: 48%;}
-
-    #vaisseau1{
-        position: absolute;
-        top: -600px;
-        left: 0px;
-        width: 16.7%;
-    
-        animation: descenteProjets 6s linear normal 1 forwards;
-    }
-
-    /* --section 3-- */
-    #section3 svg{
-        position: absolute;
-        left: 55px;
-    }
-
-    .projet1, .projet2, .projet3{top: 123px;}
-    
-    /* --animation-- */
-    @keyframes descenteProjets{
-    16%, 18%{top: 120px; left: 8.4%;}
-    34%, 36%{top: -600px;}
-    52%, 54%{top: 120px; left: 60.3%;}
-    71%, 73%{top: -600px;}
-    90%, 97%{top: 640px; left: 8.4%;}
-    100%{top: -600px; left: 66.5%;}
-    }
-}
-
-
-/* ---TABLETTE HORIZONTALES--- */
-@media screen and (max-width: 970px){
-
-    /* --section 3-- */
-    .cadre{height: 175px; width: 175px;}
-    .container-cadres{margin: 0 auto!important; padding-top: 100px;}
-    #moon{width: 200%; transform: translateZ(-20px) scale(1);}
-    #sectionProjets footer{bottom: -475px;}
-}
-
-@media screen and (max-width: 937px) and (orientation: portrait){
-    /* --général-- */
-    .show-on-desktop{display: none!important;}
-}
-
-@media screen and (max-width: 937px){
-    /* --section 2--*/
-    #text-auto{padding-top: 0;}
-    #typed{font-size: 1.2rem!important;}
-}
-
-
-@media screen and (max-width: 917px){
-    /* --section 1-- */
-    .bienvenue{padding-top: 30%;}
-    .poisDroit, .poisGauche{top: 50%;}
-
-    /* --section 2-- */
-    .cadre-right, .cadre-left{margin: 0;}
-}
-
-@media screen and (max-width: 800px){
-    /* --section 1-- */
-    #section1 .bienvenue{padding-right: 0; width: 95%;}
-
-    /* --section 2-- */
-    .col-5, .col-7{max-height: 100vh;}
-
-    /* --section Contact-- */
-    #sectionContact{
-        .w50{width: 100%;}
-        .flex{flex-direction: column;}
-
-        div.spaceship{order: 2;}
-        div.formContact{order: 1;}
-    }
-}
-
-
-/* ---TABLETTE VERTICALES--- */
-
-@media screen and (max-width: 685px){
-    /* --général-- */
-    .w33{width: 100%;}
-    #vaisseau1{
-        display: none;    
-        animation: none;
-    }
-
-    .animProjets{animation: none; opacity: 1;}
-    
-    /* --section 2-- */
-    .cadre{height: 200px; width: 200px;}
-    .cadre-bas{transform: translateZ(0) scale(1)}
-    #anim-container1{height: 270px;}
-    #sectionProjets footer{bottom: -35px;}
-
-    /* --section 3--*/
-    #section3{padding: 10px 30px 200px;}
-
-    /* --footer-- */
-    footer{
-        margin-top: 120px;
-
-        p, a{font-size: 16px;}
-    }
-
-    /* --section 3-- */ 
-    #section3 svg{
-        position: absolute;
-        left: 175px;
-    }
-    
-    .projet1, .projet2, .projet3, .projetComplet1, .projetComplet2, .projetComplet3{animation: none;}
-    .projet1, .projet2, .projet3{display: none;}
-}
-
-@media screen and (max-width: 619px){
-    /* --général-- */
-    .hideMobile{display: none;}
-
-    /* --menu-- */
-    .logo-container .logo{max-height: 60px;}
-    #main-header.headerMince{height: 80px;}
-    #main-header.headerMince .logo-container {height: 50px;}
-    #main-header.headerMince .menu{height: 35px;}
-
-    /* --sections 1-- */
-    #section1 h1{margin-bottom: 0;}
-    #section1 .bienvenue{margin: 0 auto; text-align: center;}
-
-    /* --section 2-- */
-    .container-cadres{margin-left: 100px;}
-    .cadre-left, .cadre-right{display: inline-block;}
-    .plusBas{top: 15%; right: -100%;}
-
-    /* --section 3-- */
-    #section3{min-height: 650px;}
-
-    /* --footer-- */
-    footer{bottom: -80px!important;}
-}
-
-
-/* ---MOBILE--- */
-
-@media screen and (max-width: 555px){
-    /* --menu-- */
-    #main-header.headerMince .menu{max-height: 25px;}
-    #main-header.headerMince .logo-container {height: 30px;}
-    .logo-container{height: 40px;}
-    .menu{height: 35px;}
-
-    /* --section 1-- */
-    .bienvenue{padding-top: 10%;}
-    #section1{overflow-x: hidden;}
-
-    /* --section 2--*/
-    .cadres{height: 250px; width: 250px;}
-    .cadre-bas{display: none;}
-
-    /* --section3-- */
-    #moon{width: 160%;}
-}
-
-@media screen and (max-width: 500px){
-    /* --section 2-- */
-    .plusBas p{font-size: 16px;}
-
-    /* --footer-- */
-    .footerA{width:100%; text-align: center;}
-    footer{padding: 20px 50px 0; justify-content: center;}
-}
-
-@media screen and (max-width: 435px){
-    /* --section 2-- */
-    .plusBas {
-        top: 10%;
-
-        p{font-size: 11px;}
-    }
-    .screenshot{max-width: 80px;}
-
-    /* --footer-- */
-    footer{bottom: -135px!important;}
-}
-
-@media screen and (max-width: 380px){
-    /* --footer-- */
-    footer{bottom: -165px!important;}
-}
-
-@media screen and (orientation: portrait){
-    /* --section 2-- */
-    .showArrow{display: inline-block; color: white; font-weight: bold;}
-    .screen{display: block;}
+@media screen and (min-width: 1000px) {
+  .show-mobile {
+    display: none !important;
+  }
+
+  .show-desktop {
+    display: inline-block !important;
+  }
 }
