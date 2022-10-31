@@ -7,7 +7,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "css": "node-sass --include-path scss scss/style.scss -o css/style.css",
+    "css": "node-sass --include-path scss scss/style.scss -o css",
     "watch": "nodemon -e scss -x 'yarn css'"
   }
 }
