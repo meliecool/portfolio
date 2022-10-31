@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch": "nodemon -e scss -x 'yarn css'"
+  }
+}
